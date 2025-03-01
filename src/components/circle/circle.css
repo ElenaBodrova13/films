@@ -1,0 +1,27 @@
+.circle {
+  border-radius: 50%;
+  border: 4px, solid;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  border-color: #e9d100;
+  margin-right: 10px;
+  box-sizing: content-box;
+}
+
+.circle span {
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.low {
+  border-color: #e90000;
+}
+.middle {
+  border-color: #e97e00;
+}
+
+.huge {
+  border-color: #66e900;
+}

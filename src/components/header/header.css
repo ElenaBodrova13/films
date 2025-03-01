@@ -1,0 +1,22 @@
+.header {
+  height: 160px;
+  width: 1010px;
+}
+.header_wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 146px;
+  height: 53px;
+}
+.header_button {
+}
+
+.header_input {
+  margin-left: 25px;
+  margin-right: auto;
+  width: 938px;
+  height: 40px;
+  margin-top: 20px;
+  border-color: #d9d9d9;
+  border-radius: 4px;
+}
