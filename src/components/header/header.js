@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Pagination } from 'antd'
+import { Pagination, Alert } from 'antd'
 
 import debounce from '../../debounce'
 import './header.css'
@@ -143,6 +143,7 @@ class Header extends Component {
       newTotalPages,
     } = this.state
 
+    const alert = films.length === 0 ? <Alert message="Фильмов по запросу не найдено" /> : null
     const imp =
       tab === 'Search' ? (
         <input
@@ -162,6 +163,7 @@ class Header extends Component {
         </div>
 
         <StoreContext.Provider value={genres.genres}>
+          {alert}
           <ItemList
             films={films}
             loading={loading}
