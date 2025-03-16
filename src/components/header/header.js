@@ -61,7 +61,7 @@ class Header extends Component {
         this.onError()
       }
       this.setState({
-        genres: genre,
+        genres: genre.genres,
       })
     })
   }
@@ -162,7 +162,7 @@ class Header extends Component {
           {imp}
         </div>
 
-        <StoreContext.Provider value={genres.genres}>
+        <StoreContext.Provider value={genres}>
           {alert}
           <ItemList
             films={films}

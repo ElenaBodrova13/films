@@ -9,15 +9,19 @@ function Genre(props) {
   return (
     <StoreContext.Consumer>
       {(value) => {
-        value.forEach((elem) => {
-          filmGenre.forEach((g) => {
-            if (elem.id === g) {
-              arr.push(elem.name)
+        if (value) {
+          value.forEach((elem) => {
+            if (filmGenre) {
+              filmGenre.forEach((g) => {
+                if (elem.id === g) {
+                  arr.push(elem.name)
+                }
+                return arr
+              })
             }
-            return arr
           })
-        })
-        const element = arr.map((genre) => <GenreBtn genre={genre} />)
+        }
+        const element = arr.map((genre) => <GenreBtn genre={genre} key={Math.random()} />)
         return <div>{element}</div>
       }}
     </StoreContext.Consumer>
